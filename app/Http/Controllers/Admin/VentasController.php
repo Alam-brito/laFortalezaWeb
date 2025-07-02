@@ -307,7 +307,7 @@ class VentasController extends Controller
                     'id_almacen' => $request->almacenId,
                     'id_venta' => $ventaId,
                     'cantidad' => $item['cantidad'],
-                    //'descripcion' => $item['descripcion'] ?? null
+                    'descripcion' => $item['descripcion'] ?? null
                 ]);
 
                 // Actualizar stock
@@ -417,7 +417,7 @@ class VentasController extends Controller
             $detalles = DB::table('detalle_venta')
                 ->select(
                     'detalle_venta.cantidad', // <-- Se eliminó detalle_venta.id
-                    //'detalle_venta.descripcion',
+                    'detalle_venta.descripcion', // Descripcion del detalle de la venta
                     'producto.nombre as producto_nombre',
                     'producto.precio',
                     'almacen.nombre as almacen_nombre'

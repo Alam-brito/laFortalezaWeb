@@ -260,9 +260,9 @@ const changePage = (page) => {
             <Hero></Hero>
             <!--Fin-->
             <!-- Banner promocional (similar a Farmacorp) -->
-            <div class="bg-green-400 text-white py-2 px-4 text-center text-3xl font-bold">
+            <!-- <div class="bg-green-400 text-white py-2 px-4 text-center text-3xl font-bold">
                 ¡Aprovecha las promociones carnavaleras! 🎁 🚀
-            </div>
+            </div> -->
             <div class="bg-gray-100 dark:bg-gray-800">
                 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
                     <!-- Encabezado con contador de productos y nombre -->
@@ -332,6 +332,9 @@ const changePage = (page) => {
                                 <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 line-clamp-2 h-8">
                                     <span v-html="highlightMatch(producto.descripcion, search)"></span>
                                 </p>
+                                <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400">
+                                    Bs. {{ producto.precio }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -361,6 +364,9 @@ const changePage = (page) => {
                                 </h3>
                                 <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 line-clamp-2">
                                     <span v-html="highlightMatch(producto.descripcion, search)"></span>
+                                </p>
+                                <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400">
+                                    Bs. {{ producto.precio }}
                                 </p>
                             </div>
 

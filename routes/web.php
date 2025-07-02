@@ -36,6 +36,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/servicios', [\App\Http\Controllers\User\ServicioControler::class, 'index'])->name('servicio.index'); //
     Route::get('/orden-servicio', [\App\Http\Controllers\User\ServicioControler::class, 'ordenServicio'])->name('user.orden_servicio'); //
     Route::post('/orden-servicio/store', [\App\Http\Controllers\User\ServicioControler::class, 'storeOrdenServicio'])->name('user.orden_servicio.store');
+
+    //Rutas del historial de compras del cliente
+Route::get('/historial', [\App\Http\Controllers\User\HistorialControler::class, 'index'])->name('historial.index');
+Route::delete('/historial/{id}', [\App\Http\Controllers\User\HistorialControler::class, 'destroy'])->name('historial.destroy');
+Route::get('/historial/estadisticas', [\App\Http\Controllers\User\HistorialControler::class, 'estadisticas'])->name('historial.estadisticas');
 });
 
 

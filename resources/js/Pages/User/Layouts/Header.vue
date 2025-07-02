@@ -29,7 +29,8 @@ const service = () => {
 
 </script>
 <template>
-    <nav class="bg-gray-200 dark:bg-gray-900 border-b border-gray-300 dark:border-gray-800">
+    <nav
+        class="bg-gradient-to-r from-teal-50 to-yellow-50 dark:from-slate-900 dark:to-slate-800 border-b border-teal-300 dark:border-gray-700">
 
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link :href="route('user.home')" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -85,7 +86,23 @@ const service = () => {
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
-                            Mi Perfil</Link>
+                                Mi Perfil
+                            </Link>
+                        </li>
+                    </ul>
+
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+
+                        <li>
+                            <Link
+                                class="w-full py-2 px-4 text-black hover:bg-sky-600 dark:hover:bg-sky-700 dark:hover:text-white dark:text-white flex items-center"
+                                :href="route('historial.index')" as="button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                            </svg>
+                            Mi Hsitorial</Link>
                         </li>
                     </ul>
 

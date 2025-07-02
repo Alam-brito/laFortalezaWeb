@@ -8,12 +8,6 @@ const userPermissions = computed(() => usePage().props.userPermissions ?? []);
 console.log("Roles", usePage().props.userRoles);
 console.log("Permisos", usePage().props.userPermissions);
 
-
-console.log("NUEVA INFPRMACION");
-console.log("Roles", userRoles.value);
-console.log("Cantidad de roles:", userRoles.value.length);
-console.log("Permisos", userPermissions.value);
-
 </script>
 <template>
   <aside
@@ -205,6 +199,74 @@ console.log("Permisos", userPermissions.value);
           </svg>
           Tienda Local</Link>
         </li>
+
+        <li>
+          <Link :href="route('admin.ventaDiaria.index')"
+            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="53" height="53">
+            <title>Stylized Money Payment Icon</title>
+
+            <!-- Drop shadow for the whole icon -->
+            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="3" stdDeviation="2" flood-opacity="0.3" />
+            </filter>
+
+            <!-- Background glow effect -->
+            <circle cx="32" cy="32" r="28" fill="rgba(76, 175, 80, 0.2)" />
+
+            <!-- Gradients definition -->
+            <defs>
+              <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7986CB" />
+                <stop offset="100%" stop-color="#3949AB" />
+              </linearGradient>
+
+              <linearGradient id="moneyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#66BB6A" />
+                <stop offset="100%" stop-color="#43A047" />
+              </linearGradient>
+
+              <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFC107" />
+                <stop offset="100%" stop-color="#FFA000" />
+              </linearGradient>
+            </defs>
+
+            <!-- Main card body with double outline -->
+            <rect x="6" y="18" width="52" height="32" rx="3" ry="3" fill="url(#cardGradient)" stroke="#000"
+              stroke-width="2" filter="url(#shadow)" />
+            <rect x="6" y="18" width="52" height="32" rx="3" ry="3" fill="none" stroke="#fff" stroke-width="1" />
+
+            <!-- Top money coming out effect -->
+            <rect x="10" y="6" width="44" height="12" rx="2" ry="2" fill="url(#moneyGradient)" stroke="#000"
+              stroke-width="2" />
+            <rect x="10" y="6" width="44" height="12" rx="2" ry="2" fill="none" stroke="#fff" stroke-width="1" />
+
+            <!-- Money stack below -->
+            <rect x="10" y="46" width="44" height="12" rx="2" ry="2" fill="url(#moneyGradient)" stroke="#000"
+              stroke-width="2" />
+            <rect x="10" y="46" width="44" height="12" rx="2" ry="2" fill="none" stroke="#fff" stroke-width="1" />
+
+            <!-- Circle coin in center -->
+            <circle cx="32" cy="34" r="8" fill="url(#circleGradient)" stroke="#000" stroke-width="2" />
+            <circle cx="32" cy="34" r="8" fill="none" stroke="#fff" stroke-width="1" />
+
+            <!-- Dollar sign -->
+            <path d="M32,30 v8 M30,31 h4 M30,37 h4" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+
+            <!-- Small circles for decorative buttons -->
+            <circle cx="48" cy="28" r="2" fill="#fff" opacity="0.9" />
+            <circle cx="16" cy="28" r="2" fill="#fff" opacity="0.9" />
+
+            <!-- Highlight/shimmer -->
+            <path d="M10,22 L54,22" stroke="#fff" stroke-width="1" opacity="0.6" />
+            <path d="M14,10 L50,10" stroke="#fff" stroke-width="1" opacity="0.6" />
+            <path d="M14,50 L50,50" stroke="#fff" stroke-width="1" opacity="0.6" />
+          </svg>
+          Ventas Diarias</Link>
+        </li>
+
       </ul>
       <!--Fin vista para el encargado de ventas-->
 
