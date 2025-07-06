@@ -1,0 +1,1 @@
+import t from"./AdminLayout-v-5fION2.js";import o from"./VentasDiaria-CAcE3EP0.js";import{e as r,f as e,o as a,b as m}from"./app-BBDfuzFB.js";import"./index-D9ET87YO.js";import"./Navbar-Ore4r9S-.js";import"./DropdownLink-BJVSOd4c.js";import"./Sidebar-TYqrVVU4.js";const x={__name:"Index",setup(_){return(p,c)=>(a(),r(t,null,{default:e(()=>[m(o)]),_:1}))}};export{x as default};
